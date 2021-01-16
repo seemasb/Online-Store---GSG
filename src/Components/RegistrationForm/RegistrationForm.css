@@ -1,0 +1,16 @@
+
+
+
+.RegForm{
+    /* margin: auto; */
+    /* margin-left: 200px; */
+    /* position: relative;
+    float: right; */
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.ant-input{
+    width: 50px;
+}

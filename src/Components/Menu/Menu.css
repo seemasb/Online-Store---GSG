@@ -1,0 +1,64 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+.Nav ul , .Logo , .Icons {
+    display: flex;
+    /* gap: 9%; */
+    text-transform: uppercase;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15.5px;
+    list-style-type: none;
+   
+    margin-top: 38px;
+
+}
+
+.naving:hover{
+    color: #00917c;
+}
+
+
+.naving{
+    color: black;
+    text-decoration: none;
+}
+
+
+.Menu { 
+    display: flex;
+    gap: 14.5%;
+}
+
+.Logo{
+    font-size: 37px;
+    position: relative;
+    top: -19px;
+    text-transform: none;
+    left: 5%;
+    margin-left: 1%;
+    /* right: 170px; */
+    gap: 5px;
+
+}
+
+.Icons{
+    gap: 26px;
+    position: relative;
+    /* margin-right:50px; */
+    /* right: -50px; */
+    margin-left: 14%;
+
+}
+
+
+.sofa{
+    position: relative;
+    top: 12px;
+    /* left: 20px; */
+}
+
+.Nav ul{
+    /* margin-right: 12%; */
+    gap: 11%;
+}

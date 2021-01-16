@@ -1,0 +1,17 @@
+
+
+.slider_cont{
+    /* background-image: url('../imgs/bg.jpg'); */
+    width: 98%;
+    /* background-size: cover; */
+    /* background-color: #282828; */
+    height: 521px;
+    margin-bottom: 103px;
+}
+
+.bg{
+        background-image: url('../imgs/bg.jpg');
+        background-size: cover;
+        max-width: 100%;
+
+}

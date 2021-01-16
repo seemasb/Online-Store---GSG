@@ -1,0 +1,35 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+.BarComp{
+    display: flex;
+    gap: 19px;
+    margin-left: 5.2%;
+}
+
+
+.BarComp div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.BarComp img {
+    width: 47px;
+    height: 47px;
+}
+
+#sp1 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+
+}
+
+#sp2{
+    color: #7d7d7d;
+    font-size: 13px;
+}
+

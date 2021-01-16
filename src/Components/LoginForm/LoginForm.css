@@ -1,0 +1,38 @@
+
+@import '~antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+
+.login_btn{
+    background-color: black;
+    width: 145px;
+    border: none;
+    height: 41px;
+    font-size: 17px;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    font-weight: normal;
+    margin-left: -22px;
+
+}
+
+
+.login_btn:hover{
+    background-color: #00917c;
+   
+}
+
+
+.check{
+    position: relative;
+    left:150px;
+    top: -30px;
+    /* font-size: 22px; */
+}
+
+.lost{
+    color: #00917c;
+    font-size: 17px;
+    position: relative;
+    left: -175px;
+    top: -30px;
+}

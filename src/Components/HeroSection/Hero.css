@@ -1,0 +1,14 @@
+
+
+.Hero {
+    background-image: url('../imgs/bg.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -96px;
+    /* position: relative;
+    top: -90px;
+    z-index: -50;
+    opacity: .84; */
+}
