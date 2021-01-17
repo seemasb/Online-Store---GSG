@@ -29,9 +29,9 @@ export default function ShopCard(props) {
           </div>
         </div>
       </div>
-      <span>{name}</span>
+      <span className="cardName">{name}</span>
 
-      <span>{Price}</span>
+      <span className="cardPrice">${Price}.00</span>
     </div>
   );
 }

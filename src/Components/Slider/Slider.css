@@ -5,12 +5,13 @@
     width: 98%;
     /* background-size: cover; */
     /* background-color: #282828; */
-    height: 521px;
+    /* height: 521px; */
+    height: 400;
     margin-bottom: 103px;
 }
 
 .bg{
-        background-image: url('../imgs/bg.jpg');
+        background-image: url('../imgs/1.png');
         background-size: cover;
         max-width: 100%;
 

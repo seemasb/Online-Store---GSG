@@ -13,7 +13,8 @@
    width: 555px;
    height: 279px;
     margin: auto;
-    background-color: #e1e1e1;
+    /* background-color: #e1e1e1; */
+    background-color: #f5f6f8;
     display: flex;
     gap: 0px;
     margin-top: 102px;
@@ -39,6 +40,9 @@
 .color {
     color:#00917c ;
     font-weight: bold;
+}
+.colorO {
+    color:#00917c ;
 }
 
 .C2 div {

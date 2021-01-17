@@ -1,0 +1,14 @@
+
+
+
+.Coloring{
+    cursor: pointer;
+    color: #747371;
+    font-size: 14px;
+}
+
+.colorBall{
+    position: relative;
+    top: 1px;
+    margin-right: 6px;
+}

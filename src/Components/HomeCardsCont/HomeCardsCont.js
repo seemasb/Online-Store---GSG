@@ -51,24 +51,26 @@ export default function HomeCardsCont() {
 
   return (
     <div className="HomeCardsCont">
-      {/* <div>
-        <span>OUR PRODUCTS</span>
-        <span>NEW ARRIVALS</span>
-      </div> */}
+      <div className="title">
+        <span id="t1">OUR PRODUCTS</span>
+        <span id="t2">NEW ARRIVALS</span>
+      </div>
 
-      {ElementsArr ? (
-        ElementsArr.map((Item, index) => (
-          <ShopCard
-            name={Item.name}
-            imgSrc={Item.imgSrc}
-            Price={Item.Price}
-            key={index}
-          />
-        ))
-      ) : (
-        // <div>{console.log(ElementsArr)}</div>
-        <div>Loading</div>
-      )}
+      <div className="cards">
+        {ElementsArr ? (
+          ElementsArr.map((Item, index) => (
+            <ShopCard
+              name={Item.name}
+              imgSrc={Item.imgSrc}
+              Price={Item.Price}
+              key={index}
+            />
+          ))
+        ) : (
+          // <div>{console.log(ElementsArr)}</div>
+          <div>Loading</div>
+        )}
+      </div>
     </div>
   );
 }

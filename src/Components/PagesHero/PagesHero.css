@@ -1,10 +1,8 @@
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
 .PagesHero{
     height: 303px;
     width: 100%;
-    margin-top: -92px;
+    margin-top: -96px;
     background-color: #e1e1e1;
 
 }
@@ -15,4 +13,27 @@
     position: relative;
     top: -29px; 
     margin-right: 100px;
+}
+
+.bread{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    font-family: 'Roboto Mono', monospace;  
+    font-size: 15.5px;
+    position: relative;
+    top: 167px;
+    /* left: 97px; */
+    left: 120px;
+    text-transform: uppercase;
+    gap: 4px;
+}
+
+.pageName{
+    font-size: 31px;
+}
+
+.f{
+    font-size: 17px;
+
 }

@@ -1,0 +1,25 @@
+
+.animatedCategory{
+    cursor: pointer;
+    color: #747371;
+    font-size: 14px;
+}
+.animatedCategory:hover{
+    color: teal;
+    transform: translateX(14px);
+    transition-duration: .3s;
+}
+
+
+.arrowIcon{
+    position: relative;
+    top: 4px;
+}
+
+
+hr{
+    background-color: #cfcecc;
+    height: 1px;
+    border: none;
+    margin-top: 9px;
+}

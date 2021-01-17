@@ -4,10 +4,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 370px;
+    height: 400px;
     width: 100%;
-    margin-top: 101px;
+    /* margin-top: 101px; */
+    margin-top: 50px;
     font-size: 17px;
+    color: #282828;
+    /* background-color: rgba(0, 0, 0, 0.438); */
+    /* background-image: linear-gradient( #1f1e1e0c, #1f1e1e); */
 }
 
 .profile{

@@ -7,7 +7,7 @@ import Footer from '../../Components/Footer/Footer';
 export default function LogIn() {
   return (
     <div className="LogIn">
-      <PagesHero />
+      <PagesHero page="Login" />
       <div className="customizeLogin">
         <LoginForm />
       </div>

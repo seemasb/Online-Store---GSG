@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+
+.SearchBar{
+    width: 263px;
+    margin-left: 97px;
+    margin-top: 101px;
+}
+
+.searchTitle {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+   
+}
+
+.searchTitle-div{
+    text-align: left;
+    margin-top: 40px;
+
+}
+
+.catDiv {
+    margin-top: 40px;
+}
+
+.catDiv button {
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #cfcecc;
+    margin-right: 11px;
+    margin-top: 11px;
+    color: #616060;
+
+}
+
+.catDiv button:hover {
+    border: 1px solid #00917c;
+    color: #00917c;
+    transition: .5s;
+
+}
