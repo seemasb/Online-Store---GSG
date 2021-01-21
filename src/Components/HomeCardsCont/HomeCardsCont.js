@@ -11,7 +11,6 @@ const firebaseConfig = {
   messagingSenderId: '792894613298',
   appId: '1:792894613298:web:d23de7e19db482981f992b',
 };
-
 firebase.initializeApp(firebaseConfig);
 let cloudDB = firebase.firestore();
 var testArr = [];
@@ -55,7 +54,6 @@ export default function HomeCardsCont() {
         <span id="t1">OUR PRODUCTS</span>
         <span id="t2">NEW ARRIVALS</span>
       </div>
-
       <div className="cards">
         {ElementsArr ? (
           ElementsArr.map((Item, index) => (

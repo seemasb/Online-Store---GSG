@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+
+
+.writtenInfo{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+    margin-top: 101px;
+}
+
+.wholeInfo{
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* font-family: 'Roboto Mono', monospace;   */
+
+}
+
+.ProductName{
+    font-family: 'Roboto Mono', monospace;  
+    font-size: 29px;
+}
+
+.ProductPrice{
+    font-size: 21px;
+}
+
+.ProductDescription{
+    width: 82%;
+}
+
+.ProductAvailable{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.des {
+    font-size: 13px; 
+    color:#666666;
+}
+
+.coloredBtns button {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 2px solid #ebe9e9 ;
+    background-color: chocolate;
+    margin-right: 10px;
+}
+
+.iconsBtns button {
+    font-size: 16px; 
+    color:#666666;
+    margin-right: 8px;
+    background: transparent;
+    border: none;
+
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+}
+
+.icon{
+    margin-right: 6px;
+    position: relative;
+    top: 6px;
+  
+}
+
+.ignoreForWhile button{
+    width: 138px;
+    height: 36px;
+}
+
+.imgBG{
+    /* background-color: thistle; */
+    /* width: 360px; */
+    margin-top: 0px;
+}
+
+.tabs{
+    text-align: left;
+    margin-left: 96px;
+    /* margin-top: 207px; */
+    margin-top: 100px;
+    width: 80%;
+    font-size: 17px;
+    color:#666666;
+    height: 152px;
+}
+

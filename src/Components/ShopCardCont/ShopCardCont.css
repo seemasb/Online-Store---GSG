@@ -1,0 +1,11 @@
+
+
+.ShopCardsCont{
+    width: 860px;
+    margin-top: 101.5px;
+    margin-bottom: 110px;
+}
+
+.cards {
+   row-gap: 3px;
+}

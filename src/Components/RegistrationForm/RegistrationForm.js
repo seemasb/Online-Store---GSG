@@ -1,20 +1,9 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-import 'antd/dist/antd.css';
-// import './index.css';
-import {
-  Form,
-  Input,
-  Tooltip,
-  Cascader,
-  Select,
-  Row,
-  Col,
-  Checkbox,
-  Button,
-  AutoComplete,
-} from 'antd';
-import { QuestionCircleOutlined } from '@ant-design/icons';
+import './RegistrationForm.css';
+import firebase from 'firebase';
+import firebaseAuth from 'firebase/auth';
+
+import { Form, Input, Cascader, Select, Checkbox, Button } from 'antd';
 const { Option } = Select;
 const residences = [
   {
@@ -64,7 +53,7 @@ const formItemLayout = {
       span: 24,
     },
     sm: {
-      span: 8 /*was 16 */,
+      span: 23 /*was 16*/,
     },
   },
 };
@@ -81,8 +70,49 @@ const tailFormItemLayout = {
   },
 };
 
+const firebaseConfig = {
+  apiKey: 'AIzaSyA1unudLQxcVqOzcrwx3P9sYUfK1Jq2c7E',
+  authDomain: 'teststore-f5e52.firebaseapp.com',
+  projectId: 'teststore-f5e52',
+  storageBucket: 'teststore-f5e52.appspot.com',
+  messagingSenderId: '792894613298',
+  appId: '1:792894613298:web:d23de7e19db482981f992b',
+};
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
+// firebase.initializeApp(firebaseConfig);
+
 export default function RegistrationForm() {
+  const [Email, SetEmail] = useState('');
+  const [Password, SetPassword] = useState('');
   const [form] = Form.useForm();
+
+  const Setters = {
+    Email: SetEmail,
+    Password: SetPassword,
+  };
+
+  const handleChange = (e) => {
+    const { value, name } = e.target;
+    Setters[name](value);
+    // console.log(name);
+  };
+
+  const RegisterSubmit = (e) => {
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(Email, Password)
+      .then((user) => {
+        console.log(user);
+      })
+
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log({ errorCode, errorMessage });
+      });
+  };
 
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
@@ -100,99 +130,203 @@ export default function RegistrationForm() {
       </Select>
     </Form.Item>
   );
-  const [autoCompleteResult, setAutoCompleteResult] = useState([]);
 
-  const onWebsiteChange = (value) => {
-    if (!value) {
-      setAutoCompleteResult([]);
-    } else {
-      setAutoCompleteResult(
-        ['.com', '.org', '.net'].map((domain) => `${value}${domain}`)
-      );
-    }
-  };
-
-  const websiteOptions = autoCompleteResult.map((website) => ({
-    label: website,
-    value: website,
-  }));
   return (
     <Form
       {...formItemLayout}
-      layout="vertical"
-      size="large"
       form={form}
       name="register"
       onFinish={onFinish}
+      layout="vertical"
+      size="large"
+      className="form"
       initialValues={{
         residence: ['zhejiang', 'hangzhou', 'xihu'],
         prefix: '86',
       }}
       scrollToFirstError
     >
-      <div className="RegForm">
+      <div className="flex">
         <Form.Item
+          className="FormItemWidth"
           name="FirstName"
           label="First Name"
-          style={{
-            display: 'inline-block',
-            width: '30%',
-            backgroundColor: 'Red',
-          }}
           rules={[
             {
-              message: 'The input is not valid Name',
+              message: 'The input is not valid First Name!',
             },
             {
               required: true,
-              message: 'Please input your First Name!',
+              message: 'Please input your First Name',
             },
           ]}
         >
-          <Input />
+          <Input className="inputWidth" />
         </Form.Item>
         <Form.Item
           name="LastName"
           label="Last Name"
-          labelAlign="right"
-          style={{
-            display: 'inline-block',
-            width: '20%',
-            backgroundColor: 'blue',
-          }}
+          className="FormItemWidth"
           rules={[
             {
-              message: 'The input is not valid Name',
+              message: 'The input is not valid Last Name!',
             },
             {
               required: true,
-              message: 'Please input your Last Name!',
+              message: 'Please input your Last Name',
             },
           ]}
         >
-          <Input />
+          <Input className="inputWidth" />
         </Form.Item>
       </div>
       <Form.Item
-        name="email"
-        label="E-mail"
+        name="CompanyName"
+        label="Company Name"
+        className="FormItemMargin"
         rules={[
           {
-            type: 'email',
-            message: 'The input is not valid E-mail!',
+            message: 'The input is not valid Company Name',
           },
           {
             required: true,
-            message: 'Please input your E-mail!',
+            message: 'Please input your Company Name!',
           },
         ]}
       >
         <Input />
       </Form.Item>
+      <div className="flex FormItemMargin">
+        <Form.Item
+          name="Email"
+          label="E-mail"
+          className="FormItemWidth "
+          rules={[
+            {
+              type: 'email',
+              message: 'The input is not valid E-mail!',
+            },
+            {
+              required: true,
+              message: 'Please input your E-mail!',
+            },
+          ]}
+        >
+          <Input
+            className="inputWidth"
+            value={Email}
+            name="Email"
+            onChange={handleChange}
+          />
+        </Form.Item>
+        <Form.Item
+          name="phone"
+          label="Phone"
+          className="FormItemWidth"
+          rules={[
+            {
+              required: true,
+              message: 'Please input your phone number!',
+            },
+          ]}
+        >
+          <Input
+            className="inputWidth"
+            // addonBefore={prefixSelector}
+            style={{
+              width: '100%',
+            }}
+          />
+        </Form.Item>
+      </div>
+      <Form.Item
+        name="Country"
+        label="Country"
+        className="FormItemMargin"
+        rules={[
+          {
+            type: 'array',
+            required: true,
+            message: 'Please select your Country!',
+          },
+        ]}
+      >
+        <Cascader options={residences} />
+      </Form.Item>
+      <Form.Item
+        name="Address"
+        label="Address"
+        className="FormItemMargin"
+        rules={[
+          {
+            required: true,
+            message: 'Please input Address!',
+          },
+        ]}
+      >
+        <Input placeholder="Street address" />
+        <Input
+          className="inputMargin"
+          placeholder="Apartment, Suit, Unit etc. (Optional)"
+        />
+      </Form.Item>
+      <Form.Item
+        name="Town/City"
+        label="Town/City"
+        className="FormItemMargin"
+        rules={[
+          {
+            required: true,
+            message: 'Please input Town/City!',
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+      <div className="flex FormItemMargin">
+        <Form.Item
+          name="State/Country"
+          label="State/Country"
+          className="FormItemWidth"
+          rules={[
+            {
+              message: 'The input is not valid State/Country!',
+            },
+            {
+              required: true,
+              message: 'Please input your State/Country!',
+            },
+          ]}
+        >
+          <Input className="inputWidth" />
+        </Form.Item>
+        <Form.Item
+          name="Postcode/Zip"
+          label="Postcode/Zip"
+          className="FormItemWidth"
+          rules={[
+            {
+              required: true,
+              message: 'Please input your Postcode/Zip!',
+            },
+          ]}
+        >
+          <Input
+            className="inputWidth"
+            // addonBefore={prefixSelector}
+            style={{
+              width: '100%',
+            }}
+          />
+        </Form.Item>
+      </div>
 
       <Form.Item
         name="password"
         label="Password"
+        value={Password}
+        onChange={handleChange}
+        className="FormItemMargin"
         rules={[
           {
             required: true,
@@ -201,12 +335,17 @@ export default function RegistrationForm() {
         ]}
         hasFeedback
       >
-        <Input.Password />
+        <Input.Password
+          name="Password"
+          value={Password}
+          onChange={handleChange}
+        />
       </Form.Item>
 
       <Form.Item
         name="confirm"
         label="Confirm Password"
+        className="FormItemMargin"
         dependencies={['password']}
         hasFeedback
         rules={[
@@ -230,125 +369,41 @@ export default function RegistrationForm() {
         <Input.Password />
       </Form.Item>
 
-      <Form.Item
-        name="nickname"
-        label={
-          <span>
-            Nickname&nbsp;
-            <Tooltip title="What do you want others to call you?">
-              <QuestionCircleOutlined />
-            </Tooltip>
-          </span>
-        }
-        rules={[
-          {
-            required: true,
-            message: 'Please input your nickname!',
-            whitespace: true,
-          },
-        ]}
-      >
-        <Input />
-      </Form.Item>
-
-      <Form.Item
-        name="residence"
-        label="Habitual Residence"
-        rules={[
-          {
-            type: 'array',
-            required: true,
-            message: 'Please select your habitual residence!',
-          },
-        ]}
-      >
-        <Cascader options={residences} />
-      </Form.Item>
-
-      <Form.Item
-        name="phone"
-        label="Phone Number"
-        rules={[
-          {
-            required: true,
-            message: 'Please input your phone number!',
-          },
-        ]}
-      >
-        <Input
-          addonBefore={prefixSelector}
-          style={{
-            width: '100%',
-          }}
-        />
-      </Form.Item>
-
-      <Form.Item
-        name="website"
-        label="Website"
-        rules={[
-          {
-            required: true,
-            message: 'Please input website!',
-          },
-        ]}
-      >
-        <AutoComplete
-          options={websiteOptions}
-          onChange={onWebsiteChange}
-          placeholder="website"
+      <div className="agree">
+        {/* <Form.Item>
+          <Button type="primary" htmlType="submit" className="login_btn">
+            LOGIN
+          </Button>
+          <Checkbox className="check">Remember me</Checkbox>
+        </Form.Item> */}
+        <Form.Item
+          name="agreement"
+          valuePropName="checked"
+          rules={[
+            {
+              validator: (_, value) =>
+                value
+                  ? Promise.resolve()
+                  : Promise.reject('Should accept agreement'),
+            },
+          ]}
+          {...tailFormItemLayout}
         >
-          <Input />
-        </AutoComplete>
-      </Form.Item>
-
-      <Form.Item
-        label="Captcha"
-        extra="We must make sure that your are a human."
-      >
-        <Row gutter={8}>
-          <Col span={12}>
-            <Form.Item
-              name="captcha"
-              noStyle
-              rules={[
-                {
-                  required: true,
-                  message: 'Please input the captcha you got!',
-                },
-              ]}
-            >
-              <Input />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Button>Get captcha</Button>
-          </Col>
-        </Row>
-      </Form.Item>
-
-      <Form.Item
-        name="agreement"
-        valuePropName="checked"
-        rules={[
-          {
-            validator: (_, value) =>
-              value
-                ? Promise.resolve()
-                : Promise.reject('Should accept agreement'),
-          },
-        ]}
-        {...tailFormItemLayout}
-      >
-        <Checkbox>
-          I have read the <a href="">agreement</a>
-        </Checkbox>
-      </Form.Item>
-      <Form.Item {...tailFormItemLayout}>
-        <Button type="primary" htmlType="submit">
-          Register
-        </Button>
-      </Form.Item>
+          <Checkbox>
+            I have read the <a href="">agreement</a>
+          </Checkbox>
+        </Form.Item>
+        <Form.Item {...tailFormItemLayout}>
+          <Button
+            type="primary"
+            htmlType="submit"
+            className="login_btn"
+            onClick={RegisterSubmit}
+          >
+            Register
+          </Button>
+        </Form.Item>
+      </div>
     </Form>
   );
 }

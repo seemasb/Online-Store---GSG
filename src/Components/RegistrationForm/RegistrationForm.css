@@ -1,16 +1,45 @@
 
 
-
-.RegForm{
-    /* margin: auto; */
-    /* margin-left: 200px; */
-    /* position: relative;
-    float: right; */
-    border: 1px solid black;
+.flex {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    /* width: 900px; */
+    /* gap: 31px; */
 }
 
-.ant-input{
-    width: 50px;
+.inputWidth{
+   width: 90%;
+    /* width: 320px; */
+    position: relative;
+    left: -16px;
+    
+}
+
+.form{
+    width: 55%;
+    border: 1px solid #dadada;
+    padding-left: 35px;
+    margin-left: 22%;
+    margin-top: 100px;
+    padding-top: 40px;
+    margin-bottom: 102px;
+}
+
+.FormItemWidth{
+    width: 50%;
+  
+    /* background-color: brown; */
+}
+
+.inputMargin{
+    margin-top: 22px;
+}
+
+.FormItemMargin {
+    margin-top: -10px;
+}
+
+.agree{
+    display: flex;
+    flex-direction: column;
 }
