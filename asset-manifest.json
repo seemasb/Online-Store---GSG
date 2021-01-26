@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Online-Store-GSG/static/css/main.aa188761.chunk.css",
-    "main.js": "/Online-Store-GSG/static/js/main.4102d561.chunk.js",
-    "main.js.map": "/Online-Store-GSG/static/js/main.4102d561.chunk.js.map",
-    "runtime-main.js": "/Online-Store-GSG/static/js/runtime-main.ad868357.js",
-    "runtime-main.js.map": "/Online-Store-GSG/static/js/runtime-main.ad868357.js.map",
+    "main.css": "/Online-Store-GSG/static/css/main.d3a3d735.chunk.css",
+    "main.js": "/Online-Store-GSG/static/js/main.51bf0c27.chunk.js",
+    "main.js.map": "/Online-Store-GSG/static/js/main.51bf0c27.chunk.js.map",
+    "runtime-main.js": "/Online-Store-GSG/static/js/runtime-main.4e16d89b.js",
+    "runtime-main.js.map": "/Online-Store-GSG/static/js/runtime-main.4e16d89b.js.map",
     "static/css/2.7b40b406.chunk.css": "/Online-Store-GSG/static/css/2.7b40b406.chunk.css",
-    "static/js/2.7d9f0ab0.chunk.js": "/Online-Store-GSG/static/js/2.7d9f0ab0.chunk.js",
-    "static/js/2.7d9f0ab0.chunk.js.map": "/Online-Store-GSG/static/js/2.7d9f0ab0.chunk.js.map",
-    "static/js/3.ea571226.chunk.js": "/Online-Store-GSG/static/js/3.ea571226.chunk.js",
-    "static/js/3.ea571226.chunk.js.map": "/Online-Store-GSG/static/js/3.ea571226.chunk.js.map",
+    "static/js/2.68ee47a8.chunk.js": "/Online-Store-GSG/static/js/2.68ee47a8.chunk.js",
+    "static/js/2.68ee47a8.chunk.js.map": "/Online-Store-GSG/static/js/2.68ee47a8.chunk.js.map",
+    "static/js/3.a7bf00a1.chunk.js": "/Online-Store-GSG/static/js/3.a7bf00a1.chunk.js",
+    "static/js/3.a7bf00a1.chunk.js.map": "/Online-Store-GSG/static/js/3.a7bf00a1.chunk.js.map",
     "index.html": "/Online-Store-GSG/index.html",
     "static/css/2.7b40b406.chunk.css.map": "/Online-Store-GSG/static/css/2.7b40b406.chunk.css.map",
-    "static/css/main.aa188761.chunk.css.map": "/Online-Store-GSG/static/css/main.aa188761.chunk.css.map",
-    "static/js/2.7d9f0ab0.chunk.js.LICENSE.txt": "/Online-Store-GSG/static/js/2.7d9f0ab0.chunk.js.LICENSE.txt",
+    "static/css/main.d3a3d735.chunk.css.map": "/Online-Store-GSG/static/css/main.d3a3d735.chunk.css.map",
+    "static/js/2.68ee47a8.chunk.js.LICENSE.txt": "/Online-Store-GSG/static/js/2.68ee47a8.chunk.js.LICENSE.txt",
     "static/media/Slider.css": "/Online-Store-GSG/static/media/1.58b0397d.png",
     "static/media/Hero.css": "/Online-Store-GSG/static/media/bg.4bd98f94.jpg",
     "static/media/cha.e596d208.png": "/Online-Store-GSG/static/media/cha.e596d208.png",
@@ -23,10 +23,10 @@
     "static/media/slick-theme.css": "/Online-Store-GSG/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.ad868357.js",
+    "static/js/runtime-main.4e16d89b.js",
     "static/css/2.7b40b406.chunk.css",
-    "static/js/2.7d9f0ab0.chunk.js",
-    "static/css/main.aa188761.chunk.css",
-    "static/js/main.4102d561.chunk.js"
+    "static/js/2.68ee47a8.chunk.js",
+    "static/css/main.d3a3d735.chunk.css",
+    "static/js/main.51bf0c27.chunk.js"
   ]
 }
