@@ -1,8 +1,29 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
 
 
 .ItemsLayout{
     width:860px ;
     height:40px ;
-    background-color: blue;
+    
+
+    /* background-color: blue; */
+}
+
+.layoutButtons{
+    /* height: 40px; */
+    position: relative;
+    float: left;
+}
+
+
+.layoutButtons button{
+    height: inherit;
+    background: transparent;
+    border: 1px solid rgb(189, 186, 186);
+    margin-right: 11px;
+}
+
+.layoutButtons button:hover{
+    border: 1px solid #00917c;
 }

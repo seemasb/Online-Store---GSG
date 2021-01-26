@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
 
 .writtenInfo{
     display: flex;
@@ -89,5 +89,25 @@ button {
     font-size: 17px;
     color:#666666;
     height: 152px;
+}
+
+
+
+.add_cart_btn{
+    background-color: #444444;
+    width: 145px;
+    border: none;
+    height: 37px;
+    font-size: 13px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+.add_cart_btn:hover{
+    background-color: #00917c;
+    transition: .5s;
+   
 }
 

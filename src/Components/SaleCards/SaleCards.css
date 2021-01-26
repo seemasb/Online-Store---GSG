@@ -8,6 +8,21 @@
     column-gap: -50px;
     row-gap: -50px;
 }
+/* .SaleCards:before, .SaleCards:after {
+   
+    filter: blur(0);
+    transform-origin: 50%;
+    z-index: -1;
+  } */
+  .SaleCards:hover:before, .SaleCards:hover:after {
+    border-color: transparent;
+    filter: blur(2px);
+    transform: scale(4);
+    transition: 1000ms transform ease, 2100ms blur ease, 900ms border-color ease;
+  }
+  .SaleCards:hover:after {
+    transition-delay: 100ms;
+  }
 
 .C1 , .C2 {
    width: 555px;

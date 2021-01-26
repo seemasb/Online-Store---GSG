@@ -10,6 +10,7 @@ import { FaFacebookF } from 'react-icons/fa';
 import { ImInstagram } from 'react-icons/im';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { FaGoogle } from 'react-icons/fa';
+import Quantity from '../Quantity/Quantity';
 /*tabs*/
 import { Tabs } from 'antd';
 
@@ -104,7 +105,7 @@ export default function ProductDetails({ ProductName }) {
                 <button></button>
                 <button></button>
               </div>
-              <div className="iconsBtns">
+              <div className="iconsBtns" style={{ marginBottom: '15px' }}>
                 <button>
                   <AiOutlineMail size={25} className="icon" />
                   Email to a Friend
@@ -118,10 +119,12 @@ export default function ProductDetails({ ProductName }) {
                   Compare
                 </button>
               </div>
-              <div className="ignoreForWhile">
+              <div
+                style={{ display: 'flex', gap: '31px', marginBottom: '20px' }}
+              >
                 {/* <button className="login_btn">Add to cart</button> */}
-                <button></button>
-                <button></button>
+                <Quantity />
+                <button className="add_cart_btn">Add To Cart</button>
               </div>
               <div className="iconsBtns">
                 <button>

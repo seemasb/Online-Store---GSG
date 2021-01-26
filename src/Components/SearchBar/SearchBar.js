@@ -7,7 +7,8 @@ import Coloring from '../Coloring/Coloring';
 const { Search } = Input;
 const onSearch = (value) => console.log(value);
 
-export default function SearchBar() {
+export default function SearchBar(props) {
+  const { setSeacrhCategory } = props;
   return (
     <div className="SearchBar">
       <Search
@@ -15,16 +16,23 @@ export default function SearchBar() {
         onSearch={onSearch}
         enterButton
         size="large"
+        className="search"
       />
       <div className="searchTitle-div">
         <span className="searchTitle">Category</span>
         <div className="catDiv">
-          <Category category="Chairs" />
-          <Category category="Tables" />
-          <Category category="Sofas" />
-          <Category category="Lights & Lamps" />
-          <Category category="Decorations" />
-          <Category category="Others" />
+          <Category category="Chairs" setSeacrhCategory={setSeacrhCategory} />
+          <Category category="Tables" setSeacrhCategory={setSeacrhCategory} />
+          <Category category="Sofas" setSeacrhCategory={setSeacrhCategory} />
+          <Category
+            category="Lights & Lamps"
+            setSeacrhCategory={setSeacrhCategory}
+          />
+          <Category
+            category="Decorations"
+            setSeacrhCategory={setSeacrhCategory}
+          />
+          <Category category="Others" setSeacrhCategory={setSeacrhCategory} />
         </div>
       </div>
       <div className="searchTitle-div">
@@ -35,6 +43,7 @@ export default function SearchBar() {
             defaultValue={[100, 600]}
             reverse="true"
             max="1000"
+            className="sliderColor"
             style={{ color: 'red' }}
           />
         </div>

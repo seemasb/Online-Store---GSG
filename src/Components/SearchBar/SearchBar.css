@@ -40,3 +40,22 @@
     transition: .5s;
 
 }
+
+.search button {
+    background-color: #00917c ;
+    border-color:#00917c ;
+}
+
+/* .ant-slider-track{
+    background-color: red;
+    color: red;
+    border-color: red;
+
+} */
+
+/* .sliderColor div {
+    background-color: red;
+} */
+/* .ant-slider-step {
+    background-color: black;
+} */

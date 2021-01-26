@@ -23,13 +23,13 @@ const adding = () => {
   cloudDB
     .collection('Elements')
     .add({
-      Name: 'Black Chair',
-      Category: 'Chair',
-      Price: 30,
+      Name: 'Computer Chair',
+      Category: 'Chairs',
+      Price: 55,
       IfSale: 0,
-      Description: 'Good chair',
+      Description: 'Comfy grey sofa',
       Pic:
-        'http://www.pngplay.com/wp-content/uploads/2/Modern-Chair-Transparent-File.png',
+        'https://freepngimg.com/thumb/aquarium/47112-6-office-chair-free-download-png-hd.png',
     })
     .then(function (docRef) {
       console.log('Document written with ID: ', docRef.id);
@@ -46,7 +46,7 @@ export default function HomeCardContTest() {
 
   useEffect(() => {
     const test = [];
-    var citiesRef = cloudDB.collection('Elements').limit(4);
+    var citiesRef = cloudDB.collection('Elements').limit(8);
     // citiesRef.limit(8);
     citiesRef.get().then(function (querySnapshot) {
       querySnapshot.forEach(function (doc) {
@@ -92,7 +92,7 @@ export default function HomeCardContTest() {
           <div>loading</div>
         )}
         {/* again to repeat */}
-        {ElementsArr ? (
+        {/* {ElementsArr ? (
           ElementsArr.map((Item, index) => (
             <ShopCard
               name={Item.Name}
@@ -105,7 +105,7 @@ export default function HomeCardContTest() {
         ) : (
           // <div>{console.log(ElementsArr)}</div>
           <div>loading</div>
-        )}
+        )} */}
       </div>
     </div>
   );

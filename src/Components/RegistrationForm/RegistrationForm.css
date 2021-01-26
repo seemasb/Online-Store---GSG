@@ -42,4 +42,7 @@
 .agree{
     display: flex;
     flex-direction: column;
+    position: relative;
+    left: -370px;
+    /* float: left; */
 }
